@@ -23,11 +23,9 @@
     <li><a href="3.html">진행</a></li>
 </ol>
   <h2>상담</h2>
-  <p style="margin-top:45px;">상담 절차는 비밀리에 문의해주세요.</p>
+	  <p style="margin-top:45px;">상담 절차는 비밀리에 문의해주세요.</p></center>
 <p>
 <?php
-include_once("_common.php");
-
 if(!function_exists('uchat_array2data')) {
 	function uchat_array2data($arr) {
 		$arr['time'] = time();
@@ -35,29 +33,23 @@ if(!function_exists('uchat_array2data')) {
 		$arr = array_filter($arr);
 		$arr['hash'] = md5(implode($arr['token'], $arr));
 		unset($arr['token']);
-		foreach ($arr as $k => &$v){ $v = $k.' '.urlencode($v); }i
+		foreach ($arr as $k => &$v){ $v = $k.' '.urlencode($v); }
 		return implode("|", $arr);
 	}
 }
 $joinData = array();
 $joinData['room'] = 'doillegalthings';
 $joinData['token'] = '1a0187637f0da7272993c3f923c6cb9b';
-
-$joinData['nick'] = $member['mb_nick'];
-$joinData['id'] = $member['mb_id'];
-$joinData['level'] = $member['mb_level'];
-$joinData['auth'] = $is_admin?"admin":"";
-if($is_member) {
-	$uicon_file = "/data/member/".substr($member['mb_id'],0,2)."/".$member['mb_id'].".gif";
-	if(file_exists((G5_PATH?G5_PATH:$g4['path']).$uicon_file))
-		$joinData['icons'] = $uicon_file;
-}
-//$joinData['nickcon'] = '';
+$joinData['nick'] = $닉네임변수;
+$joinData['id'] = $아이디변수;
+$joinData['level'] = $레벨변수;
+$joinData['auth'] = ''; // (admin, subadmin, member, guest)중 하나선택, 미선택시 자동(권장)
+$joinData['icons'] = $아이콘주소변수;
+//$joinData['nickcon'] = $닉콘주소변수;
 //$joinData['other'] = '';
 ?>
 <script async src="//client.uchat.io/uchat.js"></script>
 <u-chat room='<?php echo $joinData['room'];?>' user_data='<?php echo uchat_array2data($joinData); ?>' style="display:inline-block; width:500px; height:500px;"></u-chat>
 </p>
 </body>
-</center>
 </html>
