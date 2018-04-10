@@ -25,7 +25,7 @@
   <h2>상담</h2>
   <p style="margin-top:45px;">상담 절차는 비밀리에 문의해주세요.</p>
 <p>
- <?php
+<?php
 if(!function_exists('uchat_array2data')) {
 	function uchat_array2data($arr) {
 		$arr['time'] = time();
@@ -39,7 +39,7 @@ if(!function_exists('uchat_array2data')) {
 }
 $joinData = array();
 $joinData['room'] = 'doillegalthings';
-$joinData['token'] = 'a4d7ed86e60d95e2d8381395e46def8c';
+$joinData['token'] = '1a0187637f0da7272993c3f923c6cb9b';
 
 $joinData['nick'] = $닉네임변수;
 $joinData['id'] = $아이디변수;
@@ -50,7 +50,7 @@ $joinData['icons'] = $아이콘주소변수;
 //$joinData['other'] = '';
 ?>
 <script async src="//client.uchat.io/uchat.js"></script>
-<u-chat room='<?php echo $joinData['room'];?>' user_data='<?php echo uchat_array2data($joinData); ?>' style="display:inline-block; width:500; height:500;"></u-chat>
+<u-chat room='<?php echo $joinData['room'];?>' user_data='<?php echo uchat_array2data($joinData); ?>' style="display:inline-block; width:500px; height:500px;"></u-chat>
 </p>
 </body>
 </center>
