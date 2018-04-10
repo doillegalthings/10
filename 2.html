@@ -25,32 +25,8 @@
   <h2>상담</h2>
   <p style="margin-top:45px;">상담 절차는 비밀리에 문의해주세요.</p>
 <p>
-  <?php
-  if(!function_exists('uchat_array2data')) {
-  	function uchat_array2data($arr) {
-  		$arr['time'] = time();
-  		ksort($arr);
-  		$arr = array_filter($arr);
-  		$arr['hash'] = md5(implode($arr['token'], $arr));
-  		unset($arr['token']);
-  		foreach ($arr as $k => &$v){ $v = $k.' '.urlencode($v); }
-  		return implode("|", $arr);
-  	}
-  }
-  $joinData = array();
-  $joinData['room'] = 'doillegalthings';
-  $joinData['token'] = 'a4d7ed86e60d95e2d8381395e46def8c';
-
-  $joinData['nick'] = $닉네임변수;
-  $joinData['id'] = $아이디변수;
-  $joinData['level'] = $레벨변수;
-  $joinData['auth'] = ''; // (admin, subadmin, member, guest)중 하나선택, 미선택시 자동(권장)
-  $joinData['icons'] = $아이콘주소변수;
-  //$joinData['nickcon'] = $닉콘주소변수;
-  //$joinData['other'] = '';
-  ?>
   <script async src="//client.uchat.io/uchat.js"></script>
-  <u-chat room='<?php echo $joinData['room'];?>' user_data='<?php echo uchat_array2data($joinData); ?>' style="display:inline-block; width:500; height:500;"></u-chat>
+  <u-chat room='doillegalthings' user_data='auth admin|id doillegalthings%40gmail.com|nick %EB%91%90%EB%B2%94%EB%B2%95|other nosync|room doillegalthings|time 1523379389|hash ad33eb8c65bc78c938a1aca2dae2183f' style="display:inline-block; width:100%; height:100%;"></u-chat>
 </p>
 </body>
 </center>
