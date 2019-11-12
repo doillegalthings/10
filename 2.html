@@ -1,43 +1,33 @@
-<!doctype html>
-<style>
-  button {
-    border-radius: 5px;
-    color: white;
-    background-color: green;
-    padding: 5px 10px 8px 10px;
-  }
-  
-  button:hover {
-    animation-name: background-color;
-    animation-duration: 500ms;
-  }
-</style>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>은도 탐정사무소</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117295811-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-117295811-1');
-  </script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1><a href="0.html">비밀리에 들어오세요.</a></h1>
-  <div id="grid">
-    <ol>
-      <li><a href="1.html">의뢰</a></li>
-      <li><a href="2.html">상담</a></li>
-      <li><a href="3.html">진행</a></li>
-    </ol>
-    <div id="article">
-        <h2>상담</h2>
-        <p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>은도 탐정사무소</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117295811-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-117295811-1');
+</script>
+  </head>
+  <body>
+    <center>
+      <a class="title" href="index.html"><h1>비밀리에 들어오세요.</h1></a>
+    <div class="menu">
+      <h3>
+      <a class="menu-item" href="1.html">의뢰</a>
+      <a class="menu-item active" href="2.html">[상담]</a>
+      <a class="menu-item" href="3.html">진행</a>
+      </h3>
+    </div>
+    <hr></hr>
+    <div class="content">
+           <p>
           <script type="text/javascript">
            var user_id = "";
            var user_name = "";
@@ -48,13 +38,13 @@
           </script>
           <script language='javascript' src='https://moonchat.co.kr/chat_api/chat_ui.php?channel_name=hide'></script>
          </p>
-      <p>
+               <p>
         <button type="button" onClick='alert("황천길에 가지 마세요")'> 황천길 가기 </button>
-        <button type="button" onClick='alert("아직 11번의 공덕을 더 쌓아야 해요")'> 천당 가기 </button>
         <button type="button" onClick='alert("그런건 혼자서 정할 때도 되지 않았나요..?")'> 점심 메뉴 추천 </button> </p>
-         <p style="margin-top:45px;">상담 절차는 비밀리에 문의해주세요.</p>
+         <p><b>상담 절차는 비밀리에 문의해주세요.</b></p>
         </p>
-      </div>
-  </div>
+
+    </div>
+    <script src="script.js"></script>
   </body>
-  </html>
+</html>
