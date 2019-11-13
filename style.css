@@ -24,3 +24,7 @@ body {
     animation-name: background-color;
     animation-duration: 500ms;
   }
+
+.search-bar {
+    width: 350px;
+}
