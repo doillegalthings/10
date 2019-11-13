@@ -33,8 +33,13 @@
     <p>
     <img src="image/request.jpg" width=300px alt="a chasing robot">
     </p>
-    <input type="text" name="lastname">
-    <button type="botton" onClick='alert("그랬군요...하지만")'> 털어놓기 </button>
+    <form action="https://kin.naver.com/search/list.nhn" method="GET">
+        <div class="search-bar input-group mb-3 mt-5">
+            <input name="query" type="text" class="form-control rounded-pill" placeholder="털어놓을 내용" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+            </div>
+        </div>
+    </form>
     </div>
     <script src="script.js"></script>
   </body>
