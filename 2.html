@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
     <title>은도 탐정사무소</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
-          <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+              <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117295811-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,37 +15,42 @@
   gtag('js', new Date());
   gtag('config', 'UA-117295811-1');
 </script>
-  </head>
-  <body>
-    <center>
-      <a class="title" href="index.html"><h1>비밀리에 들어오세요.</h1></a>
-    <div class="menu">
-      <h3>
-      <a class="menu-item" href="1.html">의뢰</a>
-      <a class="menu-item active" href="2.html">[상담]</a>
-      <a class="menu-item" href="3.html">진행</a>
-      </h3>
-    </div>
-    <hr></hr>
-    <div class="content">
-           <p>
-          <script type="text/javascript">
-           var user_id = "";
-           var user_name = "";
-           var skin = 1;
-           var chat_width = 500;
-           var chat_height = 500;
-           var connect_win = "on";
-          </script>
-          <script language='javascript' src='https://moonchat.co.kr/chat_api/chat_ui.php?channel_name=hide'></script>
-         </p>
-               <p>
-        <button type="button" onClick='alert("황천길에 가지 마세요")'> 황천길 가기 </button>
-        <button type="button" onClick='alert("그런건 혼자서 정할 때도 되지 않았나요..?")'> 점심 메뉴 추천 </button> </p>
-         <p><b>상담 절차는 비밀리에 문의해주세요.</b></p>
-        </p>
 
-    </div>
-    <script src="script.js"></script>
-  </body>
+</head>
+<body>
+    <center>
+    <a href="index.html"><img src="image/blackheart.png" alt="heart" class="logo"></a>
+    <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="1.html">의뢰</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="2.html">상담</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="3.html">진행</a>
+            </li>
+          </ul>
+    <hr width="100%">
+    <p>
+            <script type="text/javascript">
+             var user_id = "";
+             var user_name = "";
+             var skin = 1;
+             var chat_width = 500;
+             var chat_height = 500;
+             var connect_win = "on";
+            </script>
+            <script language='javascript' src='https://moonchat.co.kr/chat_api/chat_ui.php?channel_name=hide'></script>
+           </p>
+                 <p>
+          <button type="button" class="btn btn-light" onClick='alert("황천길에 가지 마세요")'> 황천길 가기 </button>
+          <button type="button" class="btn btn-light" onClick='alert("그런건 혼자서 정할 때도 되지 않았나요..?")'> 점심 메뉴 추천 </button> </p>
+           <p><b>상담 절차는 비밀리에 문의해주세요.</b></p>
+                 </p>
+      </div>
+      <script src="script.js"></script>
+    </center>
+    </body>
+</body>
 </html>
